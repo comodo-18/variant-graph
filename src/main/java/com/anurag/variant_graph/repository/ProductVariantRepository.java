@@ -1,0 +1,12 @@
+package com.anurag.variant_graph.repository;
+
+import com.anurag.variant_graph.entity.ProductVariant;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface ProductVariantRepository
+        extends JpaRepository<ProductVariant, Long> {
+
+    List<ProductVariant> findByBaseProductId(Long baseProductId);
+}
