@@ -20,7 +20,7 @@ public class ProductVariant {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    // nullable — allows ddl-auto=update to add column to existing table with rows
     private String variantName;  // e.g. "Black Mesh", "Walnut 60inch"
 
     private String colour;
